@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #495057;
+    --background-color: #F8F9FA;
+    --component-bg-color: #FFFFFF;
+    --btn-bg-color: #007BFF;
+    --btn-text-color: #FFFFFF;
+}
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--btn-text-color);
+    padding: 20px 10px;
+    margin-bottom: 30px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: #FFFFFF;
+}
+
+header p {
+    font-size: 1em;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
+    color: #EFEFEF;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+#builder-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#components-list, #machine {
+    background-color: var(--component-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: calc(50% - 1rem);
+    min-width: 300px;
+}
+
+#components-list h2, #machine h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+#components-list button {
+    background-color: var(--btn-bg-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#components-list button:hover {
+    background-color: darken(var(--btn-bg-color), 10%);
+}
+
+/* Styling for individual components in the machine */
+#machine div {
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #builder-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #components-list, #machine {
+        width: 100%;
+    }
+}

@@ -9,15 +9,26 @@
 <body>
     <header>
         <h1>La Mettrie's Machine Builder</h1>
-        <p>Welcome to an interactive exploration of Julien Offray de La Mettrie's "Man a Machine." Drag and drop philosophical components to build your machine and understand the complexities of human nature in relation to AI.</p>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="chatbox.html">Chat with La Mettrie</a></li>
+            </ul>
+        </nav>
     </header>
     
+    <div class="intro-container">
+        <p>Welcome to an interactive exploration of Julien Offray de La Mettrie's "Man a Machine." Drag and drop philosophical components to build your machine and understand the complexities of human nature in relation to AI.</p>
+    </div>
     <div id="builder-container">
         <div id="components-list">
             <h2>Select Components</h2>
             <button data-component="consciousness">Consciousness</button>
             <button data-component="emotion">Emotion</button>
             <button data-component="reasoning">Reasoning</button>
+            <button data-component="memory">Memory</button>
             <!-- Add more components as needed -->
         </div>
         <div id="machine">

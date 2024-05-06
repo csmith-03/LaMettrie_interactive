@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mettrie's Machine Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La Mettrie's Machine Builder</h1>
+        <h3>Final Project - PHIL 202 - Dr. Boyle</h3>
+        <h3>Created by Channing Smith</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="chatbox.html">Chat with La Mettrie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro-container">
+        <p>Welcome to an interactive exploration of Julien Offray de La Mettrie's "Man a Machine." Drag and drop philosophical components to build your machine and understand the complexities of human nature in relation to AI.</p>
+    </div>
+
+    <div id="builder-container">
+        <div id="components-list">
+            <h2>Select Components</h2>
+            <button data-component="Consciousness">Consciousness</button>
+            <button data-component="Emotion">Emotion</button>
+            <button data-component="Reasoning">Reasoning</button>
+            <button data-component="Memory">Memory</button>
+            <button data-component="Imagination">Imagination</button>
+        </div>
+        <div id="machine">
+            <h2>Your Machine</h2>
+            <!-- Components will be added here -->
+        </div>
+        <button id="generate-image-button" style="display:none; margin-top: 20px; background-color: var(--secondary-color); color: var(--btn-text-color); border: none; border-radius: 5px; padding: 10px 40px; font-size: 1em; text-decoration: none; transition: background-color 0.3s ease; width: 200px;">Generate Machine Image</button>
+
+
+        <canvas id="machineCanvas" width="500" height="300" style="display:none; margin-top: 20px;"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

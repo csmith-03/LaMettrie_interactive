@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "lamettrie_interactive",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

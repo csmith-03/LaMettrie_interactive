@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with La Mettrie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La Mettrie's Machine Builder</h1>
+        <h3>Final Project - PHIL 202 - Dr. Boyle</h3>
+        <h3>Created by Channing Smith</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="chatbox.html" class="active">Chat with La Mettrie</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="chat-container">
+        <div id="chatbox">
+            <p class="botMessage">Hello! I am Julien Offray de La Mettrie. Ask me about my philosophies and works.</p>
+        </div>
+        <div class="suggestions">
+            <p>Suggested Questions:</p>
+            <ul>
+                <li onclick="setInput('Hello!')">Hello!</li>
+                <li onclick="setInput('What is your philosophy?')">What is your philosophy?</li>
+                <li onclick="setInput('Tell me about man a machine.')">Tell me about man a machine.</li>
+                <li onclick="setInput('How did you die?')">How did you die?</li>
+
+            </ul>
+        </div>
+        
+        <input type="text" id="userInput" placeholder="Ask me something...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    
+
+    <script src="chat.js"></script>
+</body>
+</html>

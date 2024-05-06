@@ -1,0 +1,275 @@
+:root {
+    --primary-color: #716e42;
+    --secondary-color: #3a3c2f;
+    --background-color: #716e42;
+    --component-bg-color: #3a3c2f;
+    --btn-bg-color: #716e42;
+    --btn-text-color: #FFFFFF;
+}
+#components-list h2, #machine h2 {
+    color: #ffffff !important; /* Forces this color, overriding other rules */
+}
+
+
+
+.intro-container {
+    color: white;
+    max-width: 600px; /* Sets a maximum width for the container */
+    margin: 20px auto; /* Centers the container horizontally and adds vertical spacing */
+    padding: 20px; /* Adds space inside the container around the text */
+    background-color: #3a3c2f; /* A light background color for the container */
+    border: 1px solid #3a3c2f; /* A subtle border for definition */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* A light shadow for depth */
+    text-align: center;
+}
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--btn-text-color);
+    padding: 20px 0px;
+    margin-bottom: 30px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: #FFFFFF;
+}
+
+header p {
+    font-size: 1em;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
+    color: #EFEFEF;
+}
+
+@media (max-width: 768px) {
+    
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+#builder-container {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center-align the child elements */
+    width: 100%; /* Use the full width available */
+    padding: 20px; /* Padding around the container */
+}
+
+#components-list, #machine {
+    background-color: var(--component-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: calc(50% - 1rem);
+    min-width: 300px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+#components-list h2, #machine h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+#components-list button {
+    background-color: #716e42;
+    border: none;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#components-list button:hover {
+    background-color: darken(var(--btn-bg-color), 10%);
+}
+
+/* Styling for individual components in the machine */
+#machine div {
+    background-color: #716e42;
+    color: var(--btn-text-color);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #builder-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #components-list, #machine {
+        width: 100%;
+    }
+}
+#machine.active {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { background-color: #fff; }
+    50% { background-color: #f0f0f0; }
+    100% { background-color: #fff; }
+}
+#about-la-mettrie {
+    background-color: #3a3c2f;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a3c2f;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #525038;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    margin-top: 20px;
+    background-color: #3a3c2f;
+    color: white
+}
+
+.profile-img {
+    flex: 0 0 300px; /* Do not grow or shrink, stay at 300px width */
+    margin-right: 40px; /* Space between image and text */
+    width: 100%;
+    max-width: 500px; /* Maximum width of the image */
+    height: auto; /* Keep the aspect ratio */
+}
+
+.text-content {
+    flex: 1; /* Takes up the remaining space */
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#chatbox {
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #3a3c2f;
+    
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.botMessage, .userMessage {
+    margin: 5px;
+    padding: 10px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-right: -5px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+button {
+    width: 90px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e1e1e1;
+}
+.suggestions ul {
+    padding: 0;
+    list-style: none;
+}
+
+.suggestions li {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestions li:hover {
+    background-color: #e0e0e0;
+}
+
+#man-a-machine-button {
+    width: 200px; /* Set the width to 200 pixels */
+    background-color: var(--primary-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#man-a-machine-button:hover {
+    background-color: #525038;
+}
